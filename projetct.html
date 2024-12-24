@@ -1,0 +1,17 @@
+<script>function gerarLetraAleatoria(tamanho) {
+    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';  // Definição de letras possíveis
+    let resultado = '';  // String para armazenar o resultado final
+
+    for (let i = 0; i < tamanho; i++) {
+        const indiceAleatorio = Math.floor(Math.random() * caracteres.length);  // Gera um índice aleatório
+        resultado += caracteres.charAt(indiceAleatorio);  // Adiciona a letra correspondente à string resultado
+    }
+
+    return resultado;  // Retorna a string gerada
+}
+
+// Exemplo de uso:
+const tamanho = 10;  // Define o tamanho da string desejada
+const letrasAleatorias = gerarLetraAleatoria(tamanho);
+console.log(letrasAleatorias);  // Exibe a string aleatória gerada
+</script>
